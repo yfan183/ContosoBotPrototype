@@ -53,7 +53,7 @@ namespace ContosoBotPrototype
                 bool pic = false;
                 if (activity.Type == ActivityTypes.Message && activity.Attachments?.Any() == true)
                 {
-                    var responseMsg = "hello";
+                    var responseMsg = "";
                     var photoUrl = activity.Attachments[0].ContentUrl;
                     var photoclient = new HttpClient();
                     var photoStream = await photoclient.GetStreamAsync(photoUrl);
